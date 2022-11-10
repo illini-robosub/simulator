@@ -1,0 +1,98 @@
+# This file is for general simulator params
+/**:
+    ros__parameters:
+        rate:
+            simulator:
+                # The rate at which the simulator bridge runs, this must be
+                # faster than any rates used for topics published by the
+                # simulator such as control, depth, sensor in cobalt_sim.yaml
+                # and any rate parameters below
+                simulator_bridge: 30.0
+                position: 10.0
+                euler: 20.0
+                obstacle_pos: 1.0
+                hydrophone_deltas: 0.5
+                lin_accel: 20.0
+
+        simulator:
+            visualize_thrusters: true
+            visualizer_update_rate: 10.0
+            ports:
+                simulated_thruster: "/dev/null"
+            significant_links:
+                gate_side_a::gate_right:
+                    label: "start_gate_post"
+                    label_id: 1
+                    height: 1.5
+                    width: 0.08
+                    depth: 0.08
+
+                gate_side_a::gate_left:
+                    label: "start_gate_post"
+                    label_id: 1
+                    height: 1.5
+                    width: 0.08
+                    depth: 0.08
+
+                dice_side_a::one_dice:
+                    label: "die_1"
+                    label_id: 2
+                    height: 0.23
+                    width: 0.23
+                    depth: 0.23
+
+                dice_side_a::two_dice:
+                    label: "die_2"
+                    label_id: 3
+                    height: 0.23
+                    width: 0.23
+                    depth: 0.23
+
+                dice_side_a::three_dice:
+                    label: "die_3"
+                    label_id: 4
+                    height: 0.23
+                    width: 0.23
+                    depth: 0.23
+
+                dice_side_a::four_dice:
+                    label: "die_4"
+                    label_id: 5
+                    height: 0.23
+                    width: 0.23
+                    depth: 0.23
+
+                dice_side_a::five_dice:
+                    label: "die_5"
+                    label_id: 6
+                    height: 0.23
+                    width: 0.23
+                    depth: 0.23
+
+                dice_side_a::six_dice:
+                    label: "die_6"
+                    label_id: 7
+                    height: 0.23
+                    width: 0.23
+                    depth: 0.23
+
+                path_marker1_side_a::link_0:
+                    label: "path_marker"
+                    label_id: 8
+                    height: 0.03
+                    width: 0.275
+                    depth: 1.0
+
+                path_marker2_side_a::link_0:
+                    label: "path_marker"
+                    label_id: 8
+                    height: 0.03
+                    width: 0.275
+                    depth: 1.0
+
+                roulette::roulette_wheel:
+                    label: "roulette_wheel"
+                    label_id: 9
+                    height: 0.001
+                    width: 1.0
+                    depth: 1.0
